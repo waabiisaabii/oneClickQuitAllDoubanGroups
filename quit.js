@@ -17,7 +17,7 @@ groupsList = document.querySelectorAll("#content > div > div.article > div.mod >
 groupItems = groupsList.getElementsByTagName("li")
 for (var i = 0; i < groupItems.length; i++) {  
   groupUrl = groupItems[i].getElementsByClassName("pic")[0].children[0].href;
-  quitGroupUrl = groupUrl + "?action=quit&ck=DKmO";
+  quitGroupUrl = groupUrl + "?action=quit&ck=CIzs";
   //console.log("Quitting " + quitGroupUrl);
     
   if (groupUrl == "https://www.douban.com/group/blabla/" 
