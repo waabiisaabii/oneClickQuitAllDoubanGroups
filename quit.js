@@ -18,9 +18,14 @@ groupItems = groupsList.getElementsByTagName("li")
 for (var i = 0; i < groupItems.length; i++) {  
   groupUrl = groupItems[i].getElementsByClassName("pic")[0].children[0].href;
   quitGroupUrl = groupUrl + "?action=quit&ck=DKmO";
-  console.log("Quitting " + quitGroupUrl);
-  
-  client.get(quitGroupUrl, function(response) {
-     console.log("Quited " + groupUrl);
-  });
+  //console.log("Quitting " + quitGroupUrl);
+    
+  if (groupUrl == "https://www.douban.com/group/blabla/" 
+      || groupUrl == "https://www.douban.com/group/586674/") {
+      console.log("found!! blabla");
+  } else { 
+      client.get(quitGroupUrl, function(response) {
+         console.log("Quited " + groupUrl);
+      });
+  }
 }
